@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A Brief Inquiry Song Ranking</title>
-  <!-- Include the Suisse Int'l Book font -->
+  <meta name="keywords" content="The 1975, song ranking, A Brief Inquiry Into Online Relationships, ABIIOR, The 1975 ranking, fan project, The 1975 fans">
+  <title>Love It If You Rank It: Rank Your Favorite Songs from ABIIOR by The 1975</title>
   <link href="https://db.onlinewebfonts.com/c/17241fb9c2ffb3ec11eba762e771435f?family=Suisse+Int%27l+Book" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Individual fixed background squares -->
   <div class="square red"></div>
   <div class="square blue"></div>
   <div class="square green"></div>
@@ -26,15 +25,22 @@
       </header>
       <div class="main">
         <p class="instructions">ABIIOR is nothing short of a masterpiece, but every fan has their favorites.</p>
-        <p class="instructions">Drag and drop the songs, screenshot your Top 5, or hit the button to share your full list on Twitter.</p>
+        <p class="instructions">
+          Drag and drop the songs, screenshot your Top 5, 
+          <a id="share-top-5-link" href="#" onclick="tweetTop5(event)">share your top 5 on Twitter</a>.
+        </p>
         <ul id="song-list">
-          <!-- Songs will be dynamically added via JavaScript -->
         </ul>
         <button id="tweet-results">Tweet Your Ranking</button>
       </div>
       <footer>
-        <p>Poetry is in the streets in full living color</p>
-      </footer>
+        <p>
+          Made with ♥ by <a href="https://twitter.com/normally_inbed" target="_blank" rel="noopener noreferrer">@normally_inbed</a>, 
+          for some meme fun during The 1975's hiatus because we're missing the guys. Visit my 
+          <a href="https://www.iliwysgenerator.com/" target="_blank" rel="noopener noreferrer">ILIWYS meme generator</a> too. 
+          Not affiliated with The 1975 or Dirty Hit.
+        </p>
+      </footer>      
     </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
