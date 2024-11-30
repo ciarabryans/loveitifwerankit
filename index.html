@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Brief Inquiry Song Ranking</title>
+  <!-- Include the Suisse Int'l Book font -->
+  <link href="https://db.onlinewebfonts.com/c/17241fb9c2ffb3ec11eba762e771435f?family=Suisse+Int%27l+Book" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Individual fixed background squares -->
+  <div class="square red"></div>
+  <div class="square blue"></div>
+  <div class="square green"></div>
+  <div class="square yellow"></div>
+  <div class="square purple"></div>
+  <div class="square black"></div>
+
+  <div class="scrollable-content">
+    <div class="content">
+      <header>
+        <p class="subheader">FIRST, DISOBEY, THEN RANK ON YOUR PHONES</p>
+        <h1>The 1975</h1>
+        <h2>A Brief Inquiry Into Online Relationships rankings</h2>
+      </header>
+      <div class="main">
+        <p class="instructions">ABIIOR is nothing short of a masterpiece, but every fan has their favorites.</p>
+        <p class="instructions">Drag and drop the songs, screenshot your Top 5, or hit the button to share your full list on Twitter.</p>
+        <ul id="song-list">
+          <!-- Songs will be dynamically added via JavaScript -->
+        </ul>
+        <button id="tweet-results">Tweet Your Ranking</button>
+      </div>
+      <footer>
+        <p>Poetry is in the streets in full living color</p>
+      </footer>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

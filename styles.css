@@ -1,0 +1,334 @@
+/* Import Suisse Int'l Book Font */
+@import url("https://db.onlinewebfonts.com/c/17241fb9c2ffb3ec11eba762e771435f?family=Suisse+Int%27l+Book");
+
+@font-face {
+  font-family: "Suisse Int'l Book";
+  src: url("https://db.onlinewebfonts.com/t/17241fb9c2ffb3ec11eba762e771435f.eot");
+  src: url("https://db.onlinewebfonts.com/t/17241fb9c2ffb3ec11eba762e771435f.eot?#iefix") format("embedded-opentype"),
+       url("https://db.onlinewebfonts.com/t/17241fb9c2ffb3ec11eba762e771435f.woff2") format("woff2"),
+       url("https://db.onlinewebfonts.com/t/17241fb9c2ffb3ec11eba762e771435f.woff") format("woff"),
+       url("https://db.onlinewebfonts.com/t/17241fb9c2ffb3ec11eba762e771435f.ttf") format("truetype"),
+       url("https://db.onlinewebfonts.com/t/17241fb9c2ffb3ec11eba762e771435f.svg#Suisse Int'l Book") format("svg");
+}
+
+/* Import Bembo Regular Font Locally */
+@font-face {
+  font-family: "Bembo Regular";
+  src: url("./fonts/Bembo_Regular.otf") format("opentype");
+}
+
+/* Import Bembo Semibold Regular Font Locally */
+@font-face {
+  font-family: "Bembo Semibold Regular";
+  src: url("./fonts/Bembo_Semibold_Regular.otf") format("opentype");
+}
+
+/* General Reset */
+body, ul, li, button, h1, h2, p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  background-color: #fff;
+  color: #000;
+  font-family: "Bembo Regular", Arial, serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Apply Bembo Regular to paragraph and list text */
+p, ul li {
+  font-family: "Bembo Regular", Arial, serif;
+}
+
+/* Apply Bembo Semibold Regular to song titles */
+ul li {
+  font-family: "Bembo Semibold Regular", Arial, serif;
+}
+
+/* Scrollable content container */
+.scrollable-content {
+  overflow-y: auto;
+  height: 100vh; /* Full viewport height */
+  position: relative;
+  z-index: 1;
+  padding: 20px 20px 60px; /* Add bottom padding to ensure button is scrollable */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Static squares positioned using absolute */
+.square {
+  position: absolute;
+  width: 30px; /* Default size */
+  height: 30px; /* Default size */
+  z-index: 0;
+  animation: pulse 3s infinite ease-in-out;
+}
+
+/* Apply slight transparency to all squares */
+.square.red {
+  background-color: rgba(255, 95, 95, 0.8); /* Slightly transparent red */
+  top: 12%;
+  left: 12%;
+}
+
+.square.blue {
+  background-color: rgba(128, 198, 255, 0.8); /* Slightly transparent blue */
+  top: 78%;
+  left: 78%;
+}
+
+.square.green {
+  background-color: rgba(105, 229, 139, 0.8); /* Slightly transparent green */
+  top: 48%;
+  left: 30%;
+}
+
+.square.yellow {
+  background-color: rgba(255, 215, 0, 0.8); /* Slightly transparent yellow */
+  top: 55%;
+  left: 70%;
+}
+
+.square.purple {
+  background-color: rgba(176, 136, 249, 0.8); /* Slightly transparent purple */
+  top: 75%;
+  left: 50%;
+}
+
+.square.black {
+  background-color: rgba(0, 0, 0, 0.8); /* Slightly transparent black */
+  top: 88%;
+  left: 15%;
+}
+
+/* Reduce square size for tablets */
+@media (max-width: 1024px) {
+  .square {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Further reduce square size for mobile */
+@media (max-width: 768px) {
+  .square {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+/* Animation for pulsing effect */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+/* Vertical Text for Album Title */
+.album-title {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: rotate(90deg);
+  font-size: 1.2em;
+  font-family: "Suisse Int'l Book", Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #888;
+}
+
+/* Hide vertical text on mobile */
+@media (max-width: 768px) {
+  .album-title {
+    display: none;
+  }
+}
+
+/* Content Styles */
+.content {
+  max-width: 600px;
+  text-align: left;
+  border: none;
+  padding: 20px 30px;
+}
+
+header {
+  text-align: left;
+}
+
+.subheader {
+  font-size: 0.8em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: normal;
+  margin: 10px 0;
+  font-family: "Suisse Int'l Book", Arial, sans-serif; /* Apply Suisse Int'l Book */
+  text-transform: uppercase;
+  color: #000;
+}
+
+h2 {
+  font-size: 1.8em;
+  font-weight: normal;
+  margin-bottom: 10px;
+  font-family: "Suisse Int'l Book", Arial, sans-serif; /* Apply Suisse Int'l Book */
+  text-transform: uppercase;
+  color: #000;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 0.9em;
+  line-height: 1.4;
+  color: #555;
+  text-align: left;
+  margin-top: 20px;
+}
+
+/* Marker styles */
+.marker {
+  text-align: left;
+  font-family: "Suisse Int'l Book", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 0.9em; /* Slightly smaller text */
+  color: #444;
+  margin: 8px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 6px 0; /* Reduced padding */
+}
+
+/* Instructions Text */
+.instructions {
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  color: #444;
+}
+
+/* Song List */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+ul li {
+  background: rgba(249, 249, 249, 0.9); /* Less transparent background */
+  border: 1px solid rgba(221, 221, 221, 0.95); /* Less transparent border */
+  margin: 8px 0;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
+ul li .rank {
+  font-weight: bold;
+  margin-right: 10px;
+  color: #888;
+  text-transform: none;
+}
+
+ul li:hover {
+  background: rgba(230, 230, 230, 0.9); /* Darker shade on hover */
+}
+
+.list-header {
+  text-align: left;
+  font-family: "Suisse Int'l Book", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 0.9em; /* Slightly larger than marker */
+  color: #444;
+  margin: 10px 0; /* Add some spacing */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 5px 0; /* Add some padding for better spacing */
+}
+
+
+/* Button Styles */
+button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  font-size: 1em;
+  background: #000;
+  color: #fff;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+button:hover {
+  background: #444;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  text-align: left;
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #888;
+}
+
+/* Smaller text on mobile */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.6em;
+  }
+  h2 {
+    font-size: 1.5em;
+    line-height: 1.3em;
+  }
+  p, ul li {
+    font-size: 0.9em; /* Smaller text for body and lists */
+  }
+  .instructions {
+    font-size: 0.8em; /* Adjust instructions */
+  }
+  .content {
+    padding-bottom: 100px;
+    padding-top: 10px;
+  }
+  footer {
+    font-size: 0.8em;
+  }
+  .subheader {
+    font-size: 0.6em; /* Smaller subheader */
+    letter-spacing: 1.5px; /* Adjust letter spacing */
+    margin-bottom: 5px; /* Reduce margin */
+  }
+  .marker {
+    font-size: 0.6em; /* Slightly smaller text */
+  }
+
+  /* Ensure the top of the screen is visible */
+  header {
+    margin-top: 20px;
+  }
+}
