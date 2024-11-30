@@ -57,17 +57,16 @@ renderSongs();
 document.getElementById("tweet-results").addEventListener("click", () => {
   const items = Array.from(songList.querySelectorAll("li")).slice(0, 5);
   const top5Ranking = items.map((li) => li.textContent.trim()).join(" | ");
-  const tweetText = `My Top 5 ABIIOR songs: ${top5Ranking} #The1975\nRank your favorites: https://www.loveitifyourankit.com/`;
+  const tweetText = `My Top 5 ABIIOR songs: ${top5Ranking} \nRank your favorites: https://www.loveitifyourankit.com/`;
   const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`;
   window.open(tweetUrl, "_blank");
 });
 
-// Add this function for the link in the instructions
 function tweetTop5(event) {
   event.preventDefault();
   const items = Array.from(songList.querySelectorAll("li")).slice(0, 5);
   const top5Ranking = items.map((li) => li.textContent.trim()).join(" | ");
-  const tweetText = `My Top 5 ABIIOR songs: ${top5Ranking} #The1975\nRank your favorites: https://www.loveitifyourankit.com/`;
+  const tweetText = `My Top 5 ABIIOR songs: ${top5Ranking} \nRank your favorites: https://www.loveitifyourankit.com/`;
   const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`;
   window.open(tweetUrl, "_blank");
 }
